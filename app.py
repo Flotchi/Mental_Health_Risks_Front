@@ -21,6 +21,7 @@ BASE_URI = BASE_URI if BASE_URI.endswith('/') else BASE_URI + '/'
 # Add a '/' at the end if it's not there
 # Define the url to be used by requests.get to get a prediction (adapt if needed)
 
+
 # URL de l'API FastAPI
 url = BASE_URI + '/lstm'
 
