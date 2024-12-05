@@ -22,7 +22,7 @@ BASE_URI = BASE_URI if BASE_URI.endswith('/') else BASE_URI + '/'
 # Define the url to be used by requests.get to get a prediction (adapt if needed)
 
 # URL de l'API FastAPI
-url = BASE_URI + '/predict'
+url = BASE_URI + '/lstm'
 
 # Fonction pour appeler l'API FastAPI
 def call_api(text):
