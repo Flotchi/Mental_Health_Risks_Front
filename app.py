@@ -37,7 +37,7 @@ def call_api(text):
         return "Erreur", 0
 
 # Interface Streamlit
-st.title("PharmaFeel")
+st.title("PharmaFeel !!!")
 
 # Choix du mode d'entrée
 st.sidebar.header("Options")
@@ -51,7 +51,7 @@ if input_method == "Feeling":
             params2 = {
                 'st' : text_input}
             response = requests.get(url, params=params2)
-            jean = response.json().get("prediction")
+            jean = response.json().get("answer")
             #sentiment, confidence = call_api(text_input)
             st.write(f"**Feeling detected:** {jean}")
             #st.write(f"**Confiance :** {response:.2f}")
