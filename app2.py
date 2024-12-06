@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 import matplotlib.pyplot as plt
-import time
+
 url_lstm = 'https://sebnb-930802109890.europe-west1.run.app/lstm'
 
 st.set_page_config(
@@ -26,9 +26,6 @@ user_input = st.text_area("Enter your drug review here:", height=150, placeholde
 if st.button('Analyze'):
     if user_input :
 
-        with st.spinner('AI at work... Magic happening!'):
-            # Simuler un délai pour la requête API (par exemple, 2 secondes)
-            time.sleep(2)
 
         params = {'st' : user_input}
         response = requests.get(url_lstm, params).json()
